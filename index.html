@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/nos.fav.png">
+  <title>Age calculator app</title>  
+</head>
+<body>
+ 
+  <div class="container">
+    <div class="inputs">
+         <div class="l1"><label for="day">DAY</label></div>
+         <div class="i1"><input id="day" placeholder="DD" type="number"></div>
+         <h6 id="text1">This field required</h6>
+         <div class="l2"><label for="month">MONTH</label></div>
+         <div class="i2"><input id="month" placeholder="MM" type="number"></div>
+         <h6 id="text2">This field required</h6>
+         <div class="l3"><label for="year">YEAR</label></div>
+         <div class="i3"><input id="year" placeholder="YYYY" type="number"></div>
+         <h6 id="text3">This field required</h6>
+    </div>
+    <div class="hr"><hr></div>
+    <div class="arro" id="arr">
+         <img src="./assets/images/icon-arrow.svg" alt="arrow">
+    </div>
+    <div class="date">
+         <h1 id="years">
+          <span id="ye"><i>- -</i></span><i> years</i></h1>
+         <h1 id="months">
+          <span id="mo"><i>- -</i></span> <i>months</i></h1>
+         <h1 id="days">
+          <span id="da"><i>- -</i></span><i>days</i> </h1>
+    </div>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>

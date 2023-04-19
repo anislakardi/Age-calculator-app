@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&family=Barlow:wght@600&family=Fraunces:wght@700;900&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+
+:root{
+  /*fonts*/
+  --font-family: "Poppins" ,sans-serif;
+  --font-size-input: 32px;
+  /*colors*/
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+ * {
+  margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+width: 100vw;
+height: 100vh;
+background-color: var(--Off-white);
+font-family: var(--font-family);
+font-size: var(--font-size-input);
+overflow: hidden;
+display: grid;
+place-items: center;
+}
+.container{
+  width: 650px;
+  margin-top: 50px;
+  height: 90%;
+  display: grid;
+  grid-template-areas: 
+  "inputs inputs inputs inputs inputs"
+  "hr hr hr hr arrow"
+  "hr hr hr hr arrow"
+  "date date date date date";
+  align-content: center;
+  justify-content: center;
+  border: 0px;
+  border-radius: 20px;
+  border-bottom-right-radius: 150px;
+  background-color: var(--White);
+}
+#text1{
+  font-size: 10px;
+  color: var(--Light-red);
+  margin-top: 15px;
+  margin-left: 30%;
+  grid-area: t1;
+  display: none;
+}
+#text2{
+  font-size: 10px;
+  color: var(--Light-red);
+  margin-top: 15px;
+  margin-left: 22%;
+  grid-area: t2;
+  display: none;
+}
+#text3{
+  font-size: 10px;
+  color: var(--Light-red);
+  margin-top: 15px;
+  margin-left: (px);
+  grid-area: t3;
+  display: none;
+}
+.inputs{
+  grid-area: inputs;
+  display: grid;
+  grid-template-areas: 
+  "l1 l2 l3 l3 l3"
+  "i1 i2 i3 i3 i3"
+  "t1 t2 t3 t3 t3"
+;
+}
+#day,#month,#year{
+  height: 120%;
+  font-family: var(--font-family);
+  color: var(--Smokey-grey);
+  font-size: var(--font-size-input);
+  box-sizing: border-box;
+  border: 1px solid var(--Light-grey);
+  border-radius: 6px;
+}
+#day,#month,#year,:focus{
+ color: var(--Off-black);
+}
+
+.l1{
+  grid-area: l1;
+  padding-left: 53px;
+}
+.l2{
+  grid-area: l2;
+  padding-left: 37px;
+}
+.l3{
+  grid-area: l3;
+}
+.i1{
+  grid-area: i1;
+}
+.i2{
+  grid-area: i2;
+}
+.i3{
+  grid-area: i3;
+}
+.l1,.l2,.l3{
+  padding-top: 40px;
+  font-size: 11px;
+  padding-bottom: 5px;
+  color: var(--Smokey-grey);
+  letter-spacing: 4px;
+}
+#day{
+  margin-left: 29%;
+  width: 73%;
+  padding-left: 10%;
+}
+#month{
+  margin-left: 19%;
+  width: 70%;
+  padding-left: 10%;
+}
+#year{
+  margin-left: 0%;
+  width: 42%;
+  padding-left: 5%;
+}
+.arro {
+  grid-area: arrow;
+  margin-left: 40%;
+  width: 75px;
+  height: 75px;
+  background-color: var(--Purple);
+  border-radius: 50%;
+  cursor: pointer;
+  padding-left: 13px;
+  padding-top: 14px;
+  margin-top: 13px;
+}
+.arro:hover {
+  background-color: var(--Off-black);
+}
+
+.hr{
+  grid-area: hr;
+  width: 110%;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+.date{
+  grid-area: date;
+  margin-left: 50px;
+  font-size: 40px;
+}
+#da,#ye,#mo{
+  color: var(--Purple);
+}
+@media screen and (max-width: 450px){
+  .container{
+    width: 600px;
+    margin-top: 20px;
+  
+      grid-template-areas: 
+      "inputs inputs inputs inputs inputs"
+      "hr hr arrow hr1 hr1"
+      "hr hr arrow hr1 hr1"
+      "date date date date date";
+  }
+  .inputs{
+    grid-template-areas: 
+    "l1 l2 l3 l3"
+    "i1 i2 i3 i3"
+    "t1 t2 t3 t3"
+  ;}
+  #day,#month,#year{
+    height: 150%;
+    width: 80%;
+  }
+  .l1,.l2,.l3{
+    margin-left: 20%;
+    padding-top: 10px;
+    font-size: 19px;
+  }
+  .i1,.i2,.i3{
+  margin-left: 20%;
+  margin-bottom: 30px;
+  }
+  .i1{
+  margin-left: 0%;
+  }
+  .i2{
+    margin-left: 10%;
+    margin-right: 20px;
+  }
+  .i3{
+    margin-left: 0%;
+    padding-left: 20px;
+  }
+  .l2{
+    margin-left: 25px;
+  }
+  .l1{
+    margin-left: 5px;
+  }
+  .arro {
+    grid-area: arrow;
+    margin-left: 220px;
+    margin-right: 0px;
+  }
+  .hr{
+    grid-area: hr;
+    width: 990%;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 0px;
+  }
+  #text1{
+    font-size: 9px;
+    color: var(--Light-red);
+    margin-top: 5px;
+    margin-left: 31%;
+    grid-area: t1;
+  }
+  #text2{
+    font-size: 9px;
+    color: var(--Light-red);
+    margin-top: 5px;
+    margin-left: 28%;
+    grid-area: t2;
+  }
+  #text3{
+    font-size: 9px;
+    color: var(--Light-red);
+    margin-top: 5px;
+    margin-left: 25px;
+    grid-area: t3;
+  }
+}
+
+
+
+
+
