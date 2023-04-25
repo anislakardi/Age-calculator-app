@@ -47,16 +47,14 @@ else {
   document.getElementById("year").style.borderColor = "#141414";
 var today= new Date();
 let newyear = today.getFullYear();
-let newmonth = today.getMonth() ;
+let newmonth = today.getMonth() +1;
 let newday = today.getDate();
 const month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 if (Number(d) > newday) {
-  console.log("yes1");
   newday = newday + month[(newmonth- 1)];
-  newmonth = newmonth ;
+  newmonth = newmonth -1;
 }
 if (Number(m) > newmonth) {
-  console.log("yes2");
   newyear = newyear - Number(1);
   newmonth = newmonth + 12;
 }
